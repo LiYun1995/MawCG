@@ -1,18 +1,18 @@
 <template>
   <div class="home">
     <button @click="modal1 = !modal1">Modal</button>
-     <LModal title="Hello LYGG" width=800 ref='modalChild' v-model="modal1">
+     <MaModal title="Hello LYGG" v-model="modal1">
           <h1>Sekiro</h1>
           <p>Shadows</p>
           <p>Die</p>
           <p>Twice</p>
-      </LModal>
+      </MaModal>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import LModal from "@/components/Modal.vue";
+import MaModal from "@/components/Modal.vue";
 
 export default {
   name: "home",
@@ -22,7 +22,7 @@ export default {
     };
   },
   components: {
-    LModal
+    MaModal
   },
   methods: {}
 };
