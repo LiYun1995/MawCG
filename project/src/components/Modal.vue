@@ -54,9 +54,10 @@ export default {
   },
   computed: {
     configStyles() {
-      return {
-        width: this.width + "px"
-      };
+      if (this.width instanceof String) {
+        return { width: this.width };
+      }
+      return { width: this.width + "px" };
     }
   },
   methods: {
