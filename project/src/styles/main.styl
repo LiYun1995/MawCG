@@ -3,162 +3,195 @@ $contentColor = #e5e5e5
 $fontColors = #000000
 $darkFontColors = #9E9E9E
 *
-    margin: 0
-    padding: 0
+  margin: 0
+  padding: 0
+
 html, body
-    width: 100%
-    height: 100%
+  width: 100%
+  height: 100%
+
 /* 模态框 */
 .ma_modal_shade
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    background: rgba(105, 105, 105, 0.5)
-    display: flex
-    justify-content: center
-    align-items: center
-    .ma_modal_container
-        border: 1px solid $themeColors
-        opacity: 1
-        z-index: 9999
-        .ma_modal_header
-            width: 100%
-            height: 30px
-            background: $themeColors
-            .ma_modal_title
-                height: 30px
-                font-size: 15px
-                line-height: 30px
-                padding: 0 5px
-                display: inline-block
-                float: left
-            .ma_modal_close
-                width: 30px
-                height: 30px
-                font-size: 30px
-                display: inline-block
-                float: right
-                cursor: pointer
-        .ma_modal_content
-            width: 100%
-            background: $contentColor
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(105, 105, 105, 0.5)
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .ma_modal_container
+    border: 1px solid $themeColors
+    opacity: 1
+    z-index: 9999
+
+    .ma_modal_header
+      width: 100%
+      height: 30px
+      background: $themeColors
+
+      .ma_modal_title
+        height: 30px
+        font-size: 15px
+        line-height: 30px
+        padding: 0 5px
+        display: inline-block
+        float: left
+
+      .ma_modal_close
+        width: 30px
+        height: 30px
+        font-size: 30px
+        display: inline-block
+        float: right
+        cursor: pointer
+
+    .ma_modal_content
+      width: 100%
+      background: $contentColor
+
 /* 滑块 */
 .ma_slidebar_container
-    height: 22px
-    // background: contentColor
-    display: flex
-    justify-content: center
-    align-items: center
-    .ma_slidebar_body
-        width: 95%
-        height: 5px
-        display: inline-block
-        background: $contentColor
-        position: relative
-        .ma_slidebar_button
-            background: $themeColors
-            width: 6px
-            height: 15px
-            position: absolute
-            left: 0
-            top: -81%
-            cursor: pointer
-        .ma_slidebar_shade
-            width: 0
-            height: 100%
-            background: $themeColors
+  height: 22px
+  // background: contentColor
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .ma_slidebar_body
+    width: 95%
+    height: 5px
+    display: inline-block
+    background: $contentColor
+    position: relative
+
+    .ma_slidebar_button
+      background: $themeColors
+      width: 6px
+      height: 15px
+      position: absolute
+      left: 0
+      top: -81%
+      cursor: pointer
+
+    .ma_slidebar_shade
+      width: 0
+      height: 100%
+      background: $themeColors
+
 /* 线段hr */
 .ma_lineStyle
-    size: 1
-    color: $themeColors
+  size: 1
+  color: $themeColors
+
 /* 日历 */
 .ma_calendar_container
-    width: 360px
-    background: $contentColor
-    color: $fontColors
-    .ma_calendar_timer
-        width: 100%
-        height: 110px
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        .ma_calendar_timer_time
-            width: 90%
-            color: $fontColors
-            font-size: 35px
-        .ma_calendar_timer_date
-            width: 90%
-            color: $themeColors
-            font-size: 18px
-    .ma_calendar_can_check
-        width: 100%
-        height: 50px
-        display: flex
-        justify-content: space-between
-        align-items: center
-        .ma_calendar_check_date, .ma_calendar_check_btnup, .ma_calendar_check_btndown
-            color: $fontColors
-            font-size: 18px
-        .ma_calendar_check_date
-            width: 35%
-            text-align: center
-        .ma_calendar_check_btn
-            width: 26%
-            display: inline-block
-            text-align: center
-        .ma_calendar_check_btnup, .ma_calendar_check_btndown
-            display: inline-block
-            color: $darkFontColors
-            width: 31%
-            text-align: center
-            &:hover
-                color: #FFFFFF
-    .ma_calendar_calendar
-        width: 100%
-        height: 345px
-        .ma_calendar_can_head
-            width: 100%
-            height: 16px
-            font-size: 15px
-            color: $fontColors
-            display: flex
-            justify-content: center
-            align-items: center
-            .ma_calendar_can_head_item
-                display: inline-block
-                width: 14%
-                text-align: center
-        .ma_calendar_can_body
-            width: 100%
-            height: 258px
-            font-size: 15px
-            color: $fontColors
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-wrap: wrap
+  width: 360px
+  background: $contentColor
+  color: $fontColors
+
+  .ma_calendar_timer
+    width: 100%
+    height: 110px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .ma_calendar_timer_time
+      width: 90%
+      color: $fontColors
+      font-size: 35px
+
+    .ma_calendar_timer_date
+      width: 90%
+      color: $themeColors
+      font-size: 18px
+
+  .ma_calendar_can_check
+    width: 100%
+    height: 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .ma_calendar_check_date, .ma_calendar_check_btnup, .ma_calendar_check_btndown
+      color: $fontColors
+      font-size: 18px
+
+    .ma_calendar_check_date
+      width: 35%
+      text-align: center
+
+    .ma_calendar_check_btn
+      width: 26%
+      display: inline-block
+      text-align: center
+
+    .ma_calendar_check_btnup, .ma_calendar_check_btndown
+      display: inline-block
+      color: $darkFontColors
+      width: 31%
+      text-align: center
+
+      &:hover
+        color: #FFFFFF
+
+  .ma_calendar_calendar
+    width: 100%
+    height: 345px
+
+    .ma_calendar_can_head
+      width: 100%
+      height: 16px
+      font-size: 15px
+      color: $fontColors
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .ma_calendar_can_head_item
+        display: inline-block
+        width: 14%
+        text-align: center
+
+    .ma_calendar_can_body
+      width: 100%
+      height: 258px
+      font-size: 15px
+      color: $fontColors
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+
 .calendar_item
-    display: inline-block
-    width: 14%
-    text-align: center
+  display: inline-block
+  width: 14%
+  text-align: center
+
 .gray_item
-    color: $darkFontColors
+  color: $darkFontColors
+
 /* 按钮组 */
 .ma_button_common
-    display: inline-block
-    font-size: 15px
-    padding: 10px
-    border-radius: 5px
-    cursor: pointer
+  display: inline-block
+  font-size: 15px
+  padding: 10px
+  border-radius: 5px
+  cursor: pointer
+
 .ma_button_default, .ma_button_sure
-    background: $themeColors
-    color: #ffffff
+  background: $themeColors
+  color: #ffffff
+
 .ma_button_warn
-    background: red
-    color: #ffffff
+  background: red
+  color: #ffffff
+
 .ma_button_cancle
-    border: 1px solid #000000
+  border: 1px solid #000000
+
 /* 轮播 */
