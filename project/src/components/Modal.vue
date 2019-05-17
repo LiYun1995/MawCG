@@ -22,50 +22,50 @@
 </template>
 
 <script>
-const myComponentsName = "ma_modal";
-export default {
-  name: "MaModal",
-  props: {
-    title: {
-      type: String
-    },
-    width: {
-      type: [Number, String],
-      default: 520
-    },
-    value: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data() {
-    return {
-      myComponentsName: myComponentsName,
-      visible: this.value
-    };
-  },
-  mounted() {
-    console.log(this.value);
-  },
-  watch: {
-    value(val) {
-      this.visible = val;
-    }
-  },
-  computed: {
-    configStyles() {
-      if (this.width instanceof String) {
-        return { width: this.width };
+  const myComponentsName = "ma_modal";
+  export default {
+    name: "MaModal",
+    props: {
+      title: {
+        type: String
+      },
+      width: {
+        type: [Number, String],
+        default: 520
+      },
+      value: {
+        type: Boolean,
+        default: false
       }
-      return { width: this.width + "px" };
+    },
+    data() {
+      return {
+        myComponentsName: myComponentsName,
+        visible: this.value
+      };
+    },
+    mounted() {
+      console.log(this.value);
+    },
+    watch: {
+      value(val) {
+        this.visible = val;
+      }
+    },
+    computed: {
+      configStyles() {
+        if (this.width instanceof String) {
+          return {width: this.width};
+        }
+        return {width: this.width + "px"};
+      }
+    },
+    methods: {
+      toggleModal() {
+        this.visible = false;
+        this.$emit("input", false);
+      }
     }
-  },
-  methods: {
-    toggleModal() {
-      this.visible = false;
-      this.$emit("input", false);
-    }
-  }
-};
+  };
 </script>
 
